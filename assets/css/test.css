@@ -1,0 +1,51 @@
+
+.content{
+    width: 100%;
+    max-width: 680px; /* 800 */
+    text-align: center;
+    margin: 0 auto;
+}
+
+.box{
+    font-size: 1.25rem; /* 20 */
+    background-color: #555555;
+    position: relative;
+    padding: 100px 20px;
+}
+
+.box.has-advanced-upload{
+    outline: 2px dashed #92b0b3;
+    outline-offset: -10px;
+
+    -webkit-transition: outline-offset .15s ease-in-out, background-color .15s linear;
+    transition: outline-offset .15s ease-in-out, background-color .15s linear;
+}
+.box.is-dragover {
+  background-color: white;
+}
+#file {
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+}
+label {
+    cursor: pointer; /* "hand" cursor */
+}
+label:hover strong {
+    color: #39bfd3;
+}
+.box__button
+{
+    font-weight: 700;
+    display: block;
+    padding: 8px 16px;
+    margin: 40px auto 0;
+}
+.box__button:hover,
+.box__button:focus
+{
+    background-color: #0f3c4b;
+}

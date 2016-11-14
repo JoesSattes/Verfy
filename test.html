@@ -1,0 +1,22 @@
+<html>
+<head>
+    <title>TEST drag n drop</title>
+    <link rel="stylesheet" type="text/css" href="assets/css/test.css">
+</head>
+<body>
+    <div class="content">
+        <form class="box" method="post" action="" enctype="multipart/form-data">
+            <div class="box__input">
+                <input class="box__file" type="file" name="files[]" id="file" data-multiple-caption="{count} files selected" multiple />
+                <label for="file"><strong>Choose a file</strong>
+                    <span class="box__dragndrop"> or drag it here</span>.
+                </label>
+                <button class="box__button" type="submit" id="upload">Upload</button>
+            </div>
+        </form>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="assets/js/spark-md5.min.js"></script>
+    <script type="text/javascript" src="assets/js/test.js"> </script>
+</body>
+</html>

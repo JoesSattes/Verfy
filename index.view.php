@@ -11,6 +11,7 @@
   <link href="assets/css/logofb.css" rel="stylesheet" />
   <link href="assets/css/style-blue.css" rel="stylesheet" />
   <link href="assets/img/favicon.png" rel="icon">
+  <link rel="stylesheet" type="text/css" href="assets/css/test.css">
 </head>
 <body data-spy="scroll" data-target="#menu-section">
 
@@ -31,8 +32,7 @@
       <div class="navbar-collapse collapse">
         <ul class="nav navbar-nav navbar-right">
           <li><a href="#main">MAIN</a></li>
-          <li><a href="#upload">UPLOAD</a></li>
-          <li><a href="#check">CHECKLIST</a></li>
+          <li><a href="#upload">UPLOAD & CHECK</a></li>
           <li><a href="#history">HISTORY</a></li>
           <li><a href="#team">ABOUT</a></li>
           <li><a href="#contact">CONTACT</a></li>
@@ -55,18 +55,18 @@
                   Welcome To Verfy
                 </h3>
                 <p>
-                  Verfy is the one who verify your right
-                  <br>You can upload file and will send a hash code to you.
-                  <br>File you uploaded will be in Verfy's data. 
+                  Verfy is the proof of existence website
+                  <br>Just upload file, it will be hashed automatically.
+                  <br>Hashed file value will be in Verfy's database. 
                 </div>
                 <div class="item">
                   <h3 id="headmain">
                     What is Verfy
                   </h3>
                   <p>
-                    You can check your file detail from Verfy's hash code to receive.
-                    <br>You can upload your file and will be in Verfy's data.
-                    <br>If your file is uncopy or first upload, We will send you a copyright certificate. 
+                    You can check your file detail from Verfy's hash code.
+                    <br>
+                    <br>If your file is uncopy or first upload, Your hash would be store in our database. 
                   </p>
                 </div>
               </div>
@@ -76,7 +76,7 @@
         <div class="row animate-in" data-anim-type="fade-in-up">
           <div class="col-sm-6 col-sm-offset-3 col-md-6 col-md-offset-3 col-lg-8 col-lg-offset-2 scroll-me">
             <p >
-              You can start upload file this buttom.
+              Start UPLOAD NOW!!
             </p>
             <div class="social">
               <a href="#upload" class=" btn button-custom btn-custom-two">START VERFY</a>
@@ -91,7 +91,7 @@
         <div class="container">
           <div class="row text-center header">
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 animate-in" data-anim-type="fade-in-up">
-              <h3>Our upload</h3>
+              <h3>Upload & Check</h3>
               <hr />
             </div>
           </div>
@@ -99,58 +99,18 @@
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
               <div class="upload-wrapper">
                 <h3>Verfy Upload</h3>
-                <br>You can upload file.
-                <br>l
-                <br>l
-                <br>l
-                <br>V
+                <br>You can upload file here or check if file existed on the server.
                 <!-- drag and drop section start-->
-                <form action="/file-upload" class="dropzone">
-                  <div class="fallback">
-                    <input name="file" type="file" multiple />
-                  </div>
-                </form>
-                <!-- HTML heavily inspired by http://blueimp.github.io/jQuery-File-Upload/ -->
-                <div class="table table-striped" class="files" id="previews">
-                  <div id="template" class="file-row">
-                    <!-- This is used as the file preview template -->
-                    <div>
-                      <span class="preview"><img data-dz-thumbnail /></span>
+                <div class="content">
+                  <form class="box" method="post" action="" enctype="multipart/form-data">
+                    <div class="box__input">
+                      <input class="box__file" type="file" name="files[]" id="file" data-multiple-caption="{count} files selected" multiple />
+                      <label for="file"><strong>Choose a file</strong>
+                        <span class="box__dragndrop"> or drag it here</span>.
+                      </label>
+                      <button class="box__button btn button-custom btn-custom-two" id="uploader">Upload</button>
                     </div>
-                    <div>
-                      <p class="name" data-dz-name></p>
-                      <strong class="error text-danger" data-dz-errormessage></strong>
-                    </div>
-                    <div>
-                      <p class="size" data-dz-size></p>
-                      <div class="progress progress-striped active" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
-                        <div class="progress-bar progress-bar-success" style="width:0%;" data-dz-uploadprogress></div>
-                      </div>
-                    </div>
-                    <div>
-                      <button class="btn btn-primary start">
-                        <i class="glyphicon glyphicon-upload"></i>
-                        <span>Start</span>
-                      </button>
-                      <button data-dz-remove class="btn btn-warning cancel">
-                        <i class="glyphicon glyphicon-ban-circle"></i>
-                        <span>Cancel</span>
-                      </button>
-                      <button data-dz-remove class="btn btn-danger delete">
-                        <i class="glyphicon glyphicon-trash"></i>
-                        <span>Delete</span>
-                      </button>
-                    </div>
-                  </div>
-                  <div class="container-fluid">
-                    <div class="row">
-                      <div class="col-sm-12">
-                     </div>
-                   </div><!--/row-->
-                   <hr>
-                   <div> 
-                    <form action="/upload" class="dropzone" drop-zone="" id="file-dropzone"></form>
-                  </div>
+                  </form>
                 </div>
                 <!--Drag and drop section end-->
               </div>
@@ -159,30 +119,6 @@
         </div>
       </section>
       <!--UPLOAD SECTION END-->
-
-      <!--CHECK SECTION START-->
-      <section id="check" >
-        <div class="container">
-          <div class="row text-center header animate-in" data-anim-type="fade-in-up">
-            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-              <h3>Check Options</h3>
-              <hr />
-            </div>
-          </div>
-          <div class="row animate-in" data-anim-type="fade-in-up">
-            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-              <div class="check-wrapper">
-                <h3>Verfy Checklist</h3>
-                <br>You can check this file.
-                <br>l
-                <br>l
-                <br>l
-                <br>V
-              </div>
-            </div>
-          </div>
-        </section>
-        <!--PRIICING SECTION END-->
 
         <!--WORK SECTION START-->
         <section id="history" >
@@ -196,12 +132,26 @@
             <div class="row animate-in" data-anim-type="fade-in-up">
               <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                 <div class="history-wrapper">
-                  <h3>Verfy History upload</h3>
-                  <br>History file upload.
-                  <br>l
-                  <br>l
-                  <br>l
-                  <br>V
+                  <table class="table" align='center' width='500'>
+                    <thead>
+                      <tr>
+                        <th>Filename</th>
+                        <th>Timestamp</th>
+                        <th>Hash</th>
+                        <th>Filetype</th>
+                        <th>Filesize</th>
+                      </tr>
+                    </thead>
+                    <?php foreach ($datas as $data): ?>
+                      <?= "<tr>"?>
+                      <?= "<td>".$data->file_name."</td>"?>
+                      <?= "<td>".$data->timestamp."</td>"?>
+                      <?= "<td>".$data->hash."</td>"?>
+                      <?= "<td>".$data->file_type."</td>"?>
+                      <?= "<td>".$data->file_size."</td>"?>
+                      <?= "</tr>"?>
+                    <?php endforeach; ?>
+                  </table>
                 </div>
               </div>
             </div>
@@ -312,7 +262,7 @@
                 <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
                   <div class="contact-wrapper">
                     <h3>Address : </h3>
-                    <h4>129/195 , Ladkrabang , </h4>
+                    <h4>127.0.0.1</h4>
                     <h4>Thailand</h4>
                     <div class="footer-div" >
                       &copy; 2016 Verfy | <a href="http://www.bootstrap.com/" target="_blank" >by Bootstrap</a>
@@ -340,8 +290,8 @@
           <script src="assets/js/animations.min.js"></script>
           <!-- CUSTOM SCRIPTS -->
           <script src="assets/js/custom.js"></script>
-          <!--drage and drop-->
-          <script src="assets/js/dropzone.js"></script>
+          <script type="text/javascript" src="assets/js/spark-md5.min.js"></script>
+          <script type="text/javascript" src="assets/js/test.js"></script>
         </body>
 
         </html>

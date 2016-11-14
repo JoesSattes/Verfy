@@ -11,6 +11,6 @@ $statement = $pdo->prepare("SELECT * FROM (
 ) sub
 ORDER BY id DESC");
 $statement->execute();
-$data = $statement->fetchAll(PDO::FETCH_CLASS, 'File');
+$datas = $statement->fetchAll(PDO::FETCH_CLASS, 'File');
 
 require 'index.view.php';
