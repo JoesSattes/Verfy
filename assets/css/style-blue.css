@@ -162,6 +162,14 @@ margin: 25px 20px;
     line-height: 54px;
     text-transform: uppercase;
 }
+    #paragraphmain{
+    margin-top: 0px;
+    font-size: 20px;
+    font-weight: 700;
+    color: white;
+    line-height: 54px;
+    text-transform: uppercase;
+}
 }
 
 @media screen and (min-width: 1440px) {
@@ -272,6 +280,9 @@ color: rgb(40, 141, 203);
 font-size: 60px;
 }
 
+#nor_table {
+    text-align: left;
+}
 
 /*============================
 TEAM SECTION STYLES

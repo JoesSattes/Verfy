@@ -24,7 +24,7 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="#"><img src="assets/img/logo/logo2.png" style="width: 34px; height: 30px;">
+        <a class="navbar-brand" href="#"><img src="assets/img/logo/logo5.png" style="width: 34px; height: 30px;">
         </a>
         <a class="navbar-brand" href="#">Verfy
         </a>
@@ -54,7 +54,7 @@
                 <h3 id="headmain">
                   Welcome To Verfy
                 </h3>
-                <p>
+                <p id="paragraphmain">
                   Verfy is the proof of existence website
                   <br>Just upload file, it will be hashed automatically.
                   <br>Hashed file value will be in Verfy's database. 
@@ -63,9 +63,8 @@
                   <h3 id="headmain">
                     What is Verfy
                   </h3>
-                  <p>
+                  <p id="paragraphmain">
                     You can check your file detail from Verfy's hash code.
-                    <br>
                     <br>If your file is uncopy or first upload, Your hash would be store in our database. 
                   </p>
                 </div>
@@ -144,11 +143,11 @@
                     </thead>
                     <?php foreach ($datas as $data): ?>
                       <?= "<tr>"?>
-                      <?= "<td>".$data->file_name."</td>"?>
-                      <?= "<td>".$data->timestamp."</td>"?>
-                      <?= "<td>".$data->hash."</td>"?>
-                      <?= "<td>".$data->file_type."</td>"?>
-                      <?= "<td>".$data->file_size."</td>"?>
+                      <?= "<td id='nor_table'>".$data->file_name."</td>"?>
+                      <?= "<td id='nor_table'>".$data->timestamp."</td>"?>
+                      <?= "<td id='nor_table'>".$data->hash."</td>"?>
+                      <?= "<td id='nor_table'>".$data->file_type."</td>"?>
+                      <?= "<td id='nor_table'>".$data->file_size."</td>"?>
                       <?= "</tr>"?>
                     <?php endforeach; ?>
                   </table>
@@ -177,7 +176,7 @@
                       <h3> Sattaya <br>Singkul</h3>
                       <h5> <strong> Student IT KMITL</strong></h5>
                       <p>
-                        Hello i'm Joe.
+                        Hello I'm Joe, Frontend Developer.
                       </p>
                     </div>
                   </div>
@@ -191,7 +190,7 @@
                       <h3> Puriwat <br>Thongsad</h3>
                       <h5> <strong>Student IT KMITL</strong></h5>
                       <p>
-                        Hi i'm Job.
+                        Hi I'm Job, Frontend Developer.
                       </p>
                     </div>
                   </div>
@@ -205,7 +204,7 @@
                       <h3> Werapat <br>Subsomboon</h3>
                       <h5> <strong> Student IT KMITL</strong></h5>
                       <p>
-                        Hello i'm Kanomjean.
+                        Hello I'm Kanomjean, Backend Developer.
                       </p>
                     </div>
                   </div>
@@ -219,7 +218,7 @@
                       <h3> Phopat <br>Thongyu</h3>
                       <h5> <strong> Student IT KMITL</strong></h5>
                       <p>
-                        Hi i'm Pooh.
+                        Hi I'm Pooh, Backend Developer.
                       </p>
                     </div>
                   </div>
@@ -242,7 +241,7 @@
                   <div class="contact-wrapper">
                     <h3>We Are Social</h3>
                     <p>
-                      it social me 1 or 1 = 1.
+                      We are Verfy Team.
                     </p>
                     <div class="social-below">
                       <a href="https://www.facebook.com/JoesSattes?fref=ts" class="btn button-custom btn-custom-two" > Facebook</a>
@@ -265,7 +264,7 @@
                     <h4>127.0.0.1</h4>
                     <h4>Thailand</h4>
                     <div class="footer-div" >
-                      &copy; 2016 Verfy | <a href="http://www.bootstrap.com/" target="_blank" >by Bootstrap</a>
+                      &copy; 2016 Verfy | <a href="http://getbootstrap.com" target="_blank" >by Bootstrap</a>
                     </div>
                   </div>
                 </div>
