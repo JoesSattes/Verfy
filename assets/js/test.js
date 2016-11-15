@@ -67,7 +67,7 @@ $(document).ready(function(){
                         console.log("Response: "+json.success);
                         if(json.success == '1')
                         {
-                          window.location = '/index.php#history';
+                          window.location = 'verfy.iikjii.me/index.php#history';
                         }
                         else
                         {
